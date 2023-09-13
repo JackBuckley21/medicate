@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'model/module.dart';
+
 class AddButton extends StatelessWidget {
   const AddButton({Key? key}) : super(key: key);
 
@@ -9,11 +11,7 @@ class AddButton extends StatelessWidget {
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           boxShadow: [
-            BoxShadow(
-                color: Colors.black12,
-                spreadRadius: 1,
-                blurRadius: 5,
-                offset: Offset(1, 5)),
+            BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 5, offset: Offset(1, 5)),
           ],
         ),
         child: ElevatedButton(
@@ -27,7 +25,12 @@ class AddButton extends StatelessWidget {
             color: Color.fromRGBO(216, 79, 153, 1),
           ),
           onPressed: () {
-            // Add a new item to the list.
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return const PopUp();
+              },
+            );
           },
         ));
   }
