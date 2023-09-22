@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:medicate/styling/styling.dart';
 import 'package:medicate/widgets/model/alarm_switch.dart';
 
-class PopUp extends StatelessWidget {
-  const PopUp({super.key});
+class PopUpTablet extends StatelessWidget {
+  const PopUpTablet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class PopUp extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(color: Styling.textColour),
           ),
-          content: Container(
-              padding: const EdgeInsets.all(10),
-              child: const Column(
+          content: const SizedBox(
+              width: 400,
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   TextField(
@@ -71,20 +71,25 @@ class PopUp extends StatelessWidget {
             Stack(children: [
               Container(
                 alignment: Alignment.center,
+                padding: const EdgeInsets.only(right: 40),
                 child: const AlarmSwitch(),
               ),
               Container(
                 alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(top: 12),
                 child: const Text(
                   'Set a reminder?',
-                  style: TextStyle(color: Styling.textColour),
+                  style: TextStyle(color: Styling.textColour, fontSize: 18),
                 ),
               ),
               Container(
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () => Navigator.pop(context, 'OK'),
-                    child: const Text('OK'),
+                    child: const Text(
+                      'OK',
+                      style: TextStyle(color: Styling.textColour, fontSize: 15),
+                    ),
                   )),
             ])
           ],

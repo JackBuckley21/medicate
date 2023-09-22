@@ -20,8 +20,7 @@ class _MedicationWidget extends State<MedicationWidget> {
         padding: const EdgeInsets.only(top: 15),
         children: List.generate(4, (index) {
           if (index == 3) {
-            return Container(
-                padding: const EdgeInsets.all(20), child: const AddButton());
+            return Container(padding: const EdgeInsets.all(20), child: const AddButton());
           } else {
             return Container(
                 padding: const EdgeInsets.only(top: 10),
@@ -33,11 +32,7 @@ class _MedicationWidget extends State<MedicationWidget> {
                       color: Styling.widgetBackgroundColour,
                       borderRadius: BorderRadius.circular(18),
                       boxShadow: const [
-                        BoxShadow(
-                            color: Colors.black12,
-                            spreadRadius: 1,
-                            blurRadius: 5,
-                            offset: Offset(5, 6)),
+                        BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 5, offset: Offset(5, 6)),
                       ],
                     ),
                     child: Column(
@@ -51,8 +46,7 @@ class _MedicationWidget extends State<MedicationWidget> {
                             ),
                             Container(
                               alignment: Alignment.topRight,
-                              padding:
-                                  const EdgeInsets.only(right: 15, top: 10),
+                              padding: const EdgeInsets.only(right: 15, top: 10),
                               child: IconButton(
                                 icon: const Icon(Icons.edit_outlined),
                                 color: Styling.textColour,
@@ -69,22 +63,17 @@ class _MedicationWidget extends State<MedicationWidget> {
                           alignment: Alignment.centerLeft,
                           child: const Text(
                             'Sertraline',
-                            style: TextStyle(
-                                fontSize: 30, color: Styling.textColour),
+                            style: TextStyle(fontSize: 30, color: Styling.textColour),
                           ),
                         ),
                         Flexible(
                             child: ListView(
                           padding: const EdgeInsets.only(left: 20),
                           children: const [
-                            Text('100mg Tablets',
-                                style: TextStyle(color: Styling.textColour)),
-                            Text('56 Tablets',
-                                style: TextStyle(color: Styling.textColour)),
-                            Text('Daily - 9:00 am',
-                                style: TextStyle(color: Styling.textColour)),
-                            Text('Reminder: Enabled',
-                                style: TextStyle(color: Styling.textColour)),
+                            Text('100mg Tablets', style: TextStyle(color: Styling.textColour)),
+                            Text('56 Tablets', style: TextStyle(color: Styling.textColour)),
+                            Text('Daily - 9:00 am', style: TextStyle(color: Styling.textColour)),
+                            Text('Reminder: Enabled', style: TextStyle(color: Styling.textColour)),
                           ],
                         )),
                       ],

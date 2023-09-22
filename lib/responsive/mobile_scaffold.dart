@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:medicate/styling/styling.dart';
 import 'package:medicate/widgets/calendar.dart';
-import 'package:medicate/widgets/medication_widget.dart';
+import 'package:medicate/widgets/medication_widget/medication_widget_mobile.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class MobileScaffold extends StatefulWidget {
+  const MobileScaffold({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<MobileScaffold> createState() => _MobileScaffold();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MobileScaffold extends State<MobileScaffold> {
   late int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
